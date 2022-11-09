@@ -1,15 +1,17 @@
+import { AxiosResponse } from "axios";
 import { HttpClient } from "./HttpClient";
 
-class API extends HttpClient {
+export interface APIService {
+  fetch: (endPoint: string) => Promise<AxiosResponse<any, any>>;
+}
+
+export class APIServiceImpl extends HttpClient implements APIService {
   constructor(baseURL: string) {
     super(baseURL);
   }
 
-  getSearch = async (query: string) => {
-    const data = await this.instance.get(`/sick?q=${query}`);
-    return data;
+  fetch = (endPoint: string) => {
+    console.info("calling api");
+    return this.instance.get(this.baseURL + endPoint);
   };
 }
-
-const api = new API(process.env.REACT_APP_API_URL);
-export { api };

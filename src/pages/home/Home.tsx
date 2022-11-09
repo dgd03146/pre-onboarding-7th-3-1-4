@@ -1,7 +1,12 @@
-import React from "react";
+import { Search, SearchList } from "@/components";
 
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <div>
+      <Search />
+      <SearchList />
+    </div>
+  );
 };
 
 export default Home;
