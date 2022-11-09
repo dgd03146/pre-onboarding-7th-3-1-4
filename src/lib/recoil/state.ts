@@ -22,3 +22,13 @@ export const searchState = atom<IData[]>({
   key: keys.search,
   default: []
 });
+
+export const queryState = atom<string>({
+  key: keys.query,
+  default: ""
+});
+
+export const selectState = atom<number>({
+  key: keys.select,
+  default: -1
+});

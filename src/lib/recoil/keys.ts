@@ -1,4 +1,6 @@
 export const keys = {
   cache: "cache",
-  search: "search"
+  search: "search",
+  query: "query",
+  select: "select"
 };
