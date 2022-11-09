@@ -32,3 +32,8 @@ export const selectState = atom<number>({
   key: keys.select,
   default: -1
 });
+
+export const showState = atom<boolean>({
+  key: keys.show,
+  default: true
+});

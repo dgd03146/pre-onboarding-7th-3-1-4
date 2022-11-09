@@ -2,5 +2,6 @@ export const keys = {
   cache: "cache",
   search: "search",
   query: "query",
-  select: "select"
+  select: "select",
+  show: "show"
 };
