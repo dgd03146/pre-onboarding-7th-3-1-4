@@ -20,9 +20,9 @@ export const useSearch = () => {
     }
 
     const { data } = await searchService.search(query);
-    const startQueryData = data.filter(({ sickNm }: IData) =>
-      sickNm.startsWith(query)
-    );
+    const startQueryData = data
+      .filter(({ sickNm }: IData) => sickNm.startsWith(query))
+      .slice(0, 10);
 
     setCachedData((prev) => {
       return { ...prev, [query]: startQueryData };
